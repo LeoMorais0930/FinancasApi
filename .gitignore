@@ -1,0 +1,59 @@
+# Build
+bin/
+obj/
+*.dll
+*.exe
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Package management
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Build results
+*.Build.csdef
+
+# dotnet CLI
+artifacts/
+
+# Optional
+*.vs/
+*.db
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# JetBrains Rider
+.ReSharper*/
+*.DotSettings.user
+
+# Test coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Others
+*.swp
+*.swo
+
+# Secret or sensitive configs (caso use)
+appsettings.Development.json
