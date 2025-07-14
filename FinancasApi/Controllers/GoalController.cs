@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace FinancasApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/goals")]
+    [Tags("3 - Goals")]
     public class GoalController : ControllerBase
     {
         private readonly IGoalService _goalService;

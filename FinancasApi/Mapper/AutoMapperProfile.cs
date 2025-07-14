@@ -8,18 +8,15 @@ namespace FinancasApi.Mapper
     {
         public AutoMapperProfile()
         {
-            // User
-            CreateMap<User, UserReadDTO>();
+            CreateMap<User, UserReadDTO>().ReverseMap();
             CreateMap<UserCreateDTO, User>();
             CreateMap<UserUpdateDTO, User>();
 
-            // Transaction
-            CreateMap<Transaction, TransactionReadDTO>();
+            CreateMap<Transaction, TransactionReadDTO>().ReverseMap();
             CreateMap<TransactionCreateDTO, Transaction>();
             CreateMap<TransactionUpdateDTO, Transaction>();
 
-            // Goal
-            CreateMap<Goal, GoalReadDTO>();
+            CreateMap<Goal, GoalReadDTO>().ReverseMap();
             CreateMap<GoalCreateDTO, Goal>();
             CreateMap<GoalUpdateDTO, Goal>();
         }

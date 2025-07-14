@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace FinancasApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/transactions")]
+    [Tags("2 - Transactions")]
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionService _transactionService;

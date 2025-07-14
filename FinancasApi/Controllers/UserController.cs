@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace FinancasApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/users")]
+    [Tags("1 - Users")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;

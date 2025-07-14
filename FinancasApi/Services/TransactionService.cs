@@ -42,6 +42,8 @@ namespace FinancasApi.Services
         public async Task<TransactionReadDTO> CreateAsync(TransactionCreateDTO dto, int userId)
         {
             var entity = _mapper.Map<Transaction>(dto);
+
+            entity.Date = dto.Date ?? DateTime.UtcNow;
             entity.UserId = userId;
 
             await _transactionRepo.AddAsync(entity);
