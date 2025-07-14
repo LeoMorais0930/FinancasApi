@@ -1,8 +1,11 @@
-# Build
+# Build artifacts
 bin/
 obj/
+artifacts/
 *.dll
 *.exe
+*.pdb
+*.cache
 
 # User-specific files
 *.user
@@ -10,11 +13,11 @@ obj/
 *.userosscache
 *.sln.docstates
 
-# Visual Studio Code
+# IDE settings
 .vscode/
-
-# Rider
 .idea/
+*.vs/
+*.db
 
 # Logs
 *.log
@@ -29,15 +32,8 @@ packages/
 project.lock.json
 project.fragment.lock.json
 
-# Build results
+# ASP.NET build results
 *.Build.csdef
-
-# dotnet CLI
-artifacts/
-
-# Optional
-*.vs/
-*.db
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
@@ -51,9 +47,21 @@ coverage/
 *.coverage
 *.coveragexml
 
-# Others
+# Temporary files
 *.swp
 *.swo
 
-# Secret or sensitive configs (caso use)
+# Sensitive configuration
 appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+
+# EF Core migrations snapshot (optional)
+Migrations/
+
+# Dependency graphs
+*.dgml
+
+# Others
+*.tmp
+*.bak
