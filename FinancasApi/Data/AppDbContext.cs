@@ -14,20 +14,21 @@ namespace FinancasApi.Data
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Goal> Goals { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                // Conexão padrão local com PostgreSQL — segura, apenas para evitar falhas se não configurar
-                optionsBuilder.UseNpgsql("Host=localhost;Database=FinancasDb;Username=postgres;Password=1234");
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configurações adicionais se precisar
+            modelBuilder.Entity<User>()
+            .HasMany(u => u.Transactions)
+            .WithOne(t => t.User)
+            .HasForeignKey(t => t.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Goals)
+                .WithOne(g => g.User)
+                .HasForeignKey(g => g.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
