@@ -66,6 +66,4 @@ Migrations/
 *.tmp
 *.bak
 
-
-Properties/
 /FinancasApi/Properties/launchSettings.json
